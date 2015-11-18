@@ -145,7 +145,7 @@ map <space> <leader>
 nnoremap <Leader>o :<C-u>call OpenLines(v:count, 0)<CR>S
 nnoremap <Leader>O :<C-u>call OpenLines(v:count, -1)<CR>S
 " Shortcut to edit this nice file
-nnoremap <leader>ev :e $HOME\_vimrc
+nnoremap <leader>ev :e $HOME\Documents\dotfiles\_vimrc
 nnoremap <leader>; mqA;<ESC>`q
 " No more search highlighting pls
 nnoremap <leader>h :nohl<CR>
