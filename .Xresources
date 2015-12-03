@@ -1,1 +1,63 @@
-/home/fer22f/.Xresources
+URxvt.font: xft:Fantasque Sans Mono:size=10
+URxvt.letterSpace: -1
+URxvt.borderless: 1
+URxvt.depth: 24
+URxvt*termName: xterm-256color
+
+URxvt.scrollBar: false
+URxvt.saveLines: 5000
+
+URxvt.perl-ext-common: default,clipboard,url-select,resize-font
+URxvt.iso14755: False
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.clipboard.copycmd:  xsel -ib
+URxvt.clipboard.pastecmd: xsel -ob
+
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.launcher: firefox-aurora
+URxvt.url-select.underline: true
+
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
+
+urxvt*foreground: #f2f2f2
+urxvt*background: #101010
+
+! Normal
+! color0    black
+! color1    red
+! color2    green
+! color3    yellow
+! color4    blue
+! color5    purple
+! color6    cyan
+! color7    white
+
+urxvt*color0:    #6c6c6c
+urxvt*color1:    #e9897c
+urxvt*color2:    #b6e77d
+urxvt*color3:    #ecebbe
+urxvt*color4:    #a9cdeb
+urxvt*color5:    #ea96eb
+urxvt*color6:    #c9caec
+urxvt*color7:    #f2f2f2
+
+! Light
+! color8    black
+! color9    red
+! color10    green
+! color11    yellow
+! color12    blue
+! color13    purple
+! color14    cyan
+! color15    white
+
+urxvt*color8:    #747474
+urxvt*color9:    #f99286
+urxvt*color10:    #c3f786
+urxvt*color11:    #fcfbcc
+urxvt*color12:    #b6defb
+urxvt*color13:    #fba1fb
+urxvt*color14:    #d7d9fc
+urxvt*color15:    #e2e2e2
