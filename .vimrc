@@ -1,0 +1,1 @@
+/home/fer22f/.vimrc
