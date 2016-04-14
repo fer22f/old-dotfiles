@@ -13,7 +13,14 @@ eval $(thefuck --alias)
 
 export EDITOR="vim"
 export VISUAL="vim"
+export BROWSER="firefox-aurora"
 
+export WORKON_HOME=$HOME/.venvs
+export PROJECT_HOME=$HOME/dev
+source /usr/bin/virtualenvwrapper.sh
+
+export GOPATH=$HOME/dev/go
+export PATH=$PATH:$GOPATH/bin
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
