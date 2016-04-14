@@ -67,20 +67,12 @@ noremap : ;
 " using vim the hard way
 noremap <right> :bnext<CR>
 noremap <left> :bprev<CR>
-imap <up> <nop>
-imap <down> <nop>
-imap <left> <nop>
-imap <right> <nop>
-inoremap <esc> <nop>
 " change cursor position in insert mode
 inoremap <C-h> <left>
 inoremap <C-l> <right>
 " move visually in wrapped lines
 noremap j gj
 noremap k gk
-" get out of the insert mode easily!
-inoremap jk <ESC>
-inoremap kj <ESC>
 " This makes sense, doesn't it? :h Y
 noremap Y y$
 
@@ -159,13 +151,13 @@ nnoremap <silent> <leader>e :call Source(line('.'), line('.'))<CR>
 vnoremap <silent> <leader>e :call Source(line('v'), line('.'))<CR>
 " Normal paste
 noremap <leader>p "*p
-" ls (aka dir)
-nnoremap <leader>l :!dir<CR>
 
 set background=dark
-colorscheme gruvbox
-set guifont=Fantasque_Sans_Mono:h12
+colorscheme molokai
+set guifont=Fantasque\ Sans\ Mono\ 11
 let g:airline_powerline_fonts = 1
+set guioptions=ai
+set guiheadroom=0
 
 " mode aware cursors
 set gcr=a:block
@@ -182,4 +174,4 @@ hi VisualCursor  ctermfg=15 guifg=#fdf6e3 ctermbg=125 guibg=#d33682
 hi ReplaceCursor ctermfg=15 guifg=#fdf6e3 ctermbg=65  guibg=#dc322f
 hi CommandCursor ctermfg=15 guifg=#fdf6e3 ctermbg=166 guibg=#cb4b16
 
-let g:syntastic_d_include_dirs = add(map(filter(glob('~/AppData/Roaming/dub/packages/*', 1, 1), 'isdirectory(v:val)'), 'isdirectory(v:val . "/source") ? v:val . "/source" : v:val'), './source')
+"let g:syntastic_d_include_dirs = add(map(filter(glob('~/AppData/Roaming/dub/packages/*', 1, 1), 'isdirectory(v:val)'), 'isdirectory(v:val . "/source") ? v:val . "/source" : v:val'), './source')
