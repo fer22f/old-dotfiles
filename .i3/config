@@ -5,7 +5,7 @@ client.unfocused #333333 #333333 #888888 #292d2e
 client.urgent #2f343a #900000 #ffffff #900000
 set $mod Mod4
 
-bindsym Print exec scrot
+bindsym Print exec scrot '%F_%T.png' -e 'mv $f ~/screenshots/'
 floating_modifier $mod
 
 bindsym $mod+Return exec i3-sensible-terminal
@@ -29,11 +29,15 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+bindsym $mod+Shift+g move container to output left
+
 # split in horizontal orientation
 bindsym $mod+s split h
 
 # split in vertical orientation
 bindsym $mod+v split v
+
+workspace_auto_back_and_forth yes
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
