@@ -13,6 +13,7 @@ eval $(thefuck --alias)
 
 export EDITOR="vim"
 export VISUAL="vim"
+export TERMINAL="urxvtc"
 export BROWSER="firefox-aurora"
 
 export WORKON_HOME=$HOME/.venvs
