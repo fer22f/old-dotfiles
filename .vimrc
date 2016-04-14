@@ -1,88 +1,64 @@
 set nocompatible " Who cares about vi?
-" this makes vim suddenly convert stuff it shouldn't.
-" scriptencoding utf-8
 set fileencoding=utf-8
 set encoding=utf-8 " Requried for powerline fonts!
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'digitaltoad/vim-jade'
-Plugin 'bling/vim-airline'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'garbas/vim-snipmate'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'godlygeek/tabular'
-Plugin 'tpope/vim-repeat'
-Plugin 'morhetz/gruvbox'
-Plugin 'kien/ctrlp.vim'
+Plug 'tpope/vim-sensible'
+Plug 'scrooloose/nerdtree'
+Plug 'digitaltoad/vim-jade'
+Plug 'bling/vim-airline'
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'garbas/vim-snipmate'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-repeat'
+Plug 'morhetz/gruvbox'
+Plug 'kien/ctrlp.vim'
+Plug 'ap/vim-css-color'
+Plug 'haya14busa/incsearch.vim'
+Plug 'tomasr/molokai'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'calebsmith/vim-lambdify'
 
-call vundle#end()
+call plug#end()
+
+let g:indent_guides_guide_size=1
+let g:indent_guides_start_level=2
+let g:indent_guides_enable_on_vim_startup=1
+
+set concealcursor=cn
 
 let NERDTreeShowHidden=1
 let NERDTreeShowBookmarks=1
 
 let g:airline#extensions#tabline#enabled = 1
 
-" Enables detection, plugin and indentation
-filetype plugin indent on
-" enable syntax coloring
-syntax enable
-" make buffers behave like tabs
 set hidden
+set noswapfile backup backupdir=~/.vim/backup
 
-" no swap files!
-set noswapfile
-" but enable backup
-set backup
-set backupdir=~/.vim/backup
-
-" only draw when needed!
-set lazyredraw
-" auto complete for :e
-set wildmenu
-
-set ruler
-set cursorline     " hightlight current line
-set relativenumber " shows relative line numbers
-set number         " cool line numbers at the left
+set cursorline relativenumber number
 set colorcolumn=79 " all hail PEP-8
-set laststatus=2   " this is for airline
 set showcmd
 
 " matching parenthesis
 set showmatch matchtime=2
 
-" yea bb
-set backspace=2
-" for the autoindenting function
-set tabstop=4 softtabstop=4 shiftwidth=4
-" go go spaces
-set expandtab copyindent smarttab
-" search while typing
-" highlight searches
-set incsearch hlsearch
-" smart ignore case
-set smartcase
+set ts=4 sts=4 sw=4 et
+set copyindent smarttab
+set hlsearch smartcase
 
 " list chars!
 set list listchars=trail:•,tab:»\ 
 
-set undolevels=1000
-set history=700
-
 " stupid beeps
-set visualbell noerrorbells
+set visualbell
 
 " type commands using ;
 noremap ; :
