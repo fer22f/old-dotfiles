@@ -1,13 +1,16 @@
 URxvt.font: xft:Fantasque Sans Mono:size=10
-URxvt.letterSpace: -1
+URxvt.letterSpace: -2
 URxvt.borderless: 1
-URxvt.depth: 24
 URxvt*termName: xterm-256color
+URxvt*urgentOnBell: True
+URxvt.depth: 32
+! Required or we have the bottom line!
+URxvt*internalBorder: -1
 
 URxvt.scrollBar: false
 URxvt.saveLines: 5000
 
-URxvt.perl-ext-common: default,clipboard,url-select,resize-font
+URxvt.perl-ext-common: default,clipboard,resize-font
 URxvt.iso14755: False
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
@@ -22,7 +25,7 @@ URxvt.resize-font.smaller: C-Down
 URxvt.resize-font.bigger: C-Up
 
 urxvt*foreground: #f2f2f2
-urxvt*background: #101010
+urxvt*background: [90]#010101
 
 ! Normal
 ! color0    black
