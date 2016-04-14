@@ -11,8 +11,8 @@ source ~/dotfiles/fer22f-lambda.zsh-theme
 
 eval $(thefuck --alias)
 
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export TERMINAL="urxvtc"
 export BROWSER="firefox-aurora"
 
@@ -22,6 +22,8 @@ source /usr/bin/virtualenvwrapper.sh
 
 export GOPATH=$HOME/dev/go
 export PATH=$PATH:$GOPATH/bin
+
+eval $(dircolors ~/.dircolors)
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
