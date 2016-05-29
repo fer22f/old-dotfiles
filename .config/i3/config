@@ -119,15 +119,15 @@ bar {
 }
 
 assign [class="^Firefox$"] → 1
-assign [class="^Termite$" title="^irssi$"] → 2
+assign [class="^URxvt$" title="^irssi$"] → 2
 assign [class="^Skype$"] → 2
-assign [class="^Discord$"] → 2
+assign [class="^discord$"] → 2
 assign [class="^net-ftb-main-Main$"] → 4
 
 exec --no-startup-id urxvt -t irssi -e irssi
 exec firefox-aurora
 exec skype
-exec discord
+exec DiscordCanary
 exec i3-msg 'workspace 2; layout tabbed'
 exec --no-startup-id i3-msg 'workspace 3; exec i3-sensible-terminal; workspace 1'
 exec --no-startup-id compton -b
