@@ -134,6 +134,11 @@ bar {
     separator_symbol 
 }
 
+gaps outer 5
+gaps inner 10
+
+smart_borders on
+
 assign [class="^Firefox$"] → $workspace1
 assign [class="^URxvt$" title="^irssi$"] → $workspace2
 assign [class="^Skype$"] → $workspace2
