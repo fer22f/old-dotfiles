@@ -9,3 +9,9 @@ My Neovim setup uses Deoplete, Vim-Plug and Neomake with some plugins for
 autocompleting D, Go and Rust and some Neomake magic for compiling latex.
 
 ![Desktop screenshot](archey.png)
+
+Wallpaper is Red Alert by Sebastian Hue, on
+[DeviantArt](http://shue13.deviantart.com/art/Red-Alert-585593804), but found on
+[Reddit](https://www.reddit.com/r/ImaginaryStarscapes/comments/42gsaj/). All
+credits to the author, the image isn't located in this repository, but merely
+refered as "~/.wallpaper.jpg".
