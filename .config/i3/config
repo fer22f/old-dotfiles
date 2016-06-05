@@ -1,9 +1,15 @@
 font pango:monospace 9
-client.focused #0088CC #0088CC #ffffff #dddddd
-client.focused_inactive #333333 #333333 #888888 #292d2e
-client.unfocused #333333 #333333 #888888 #292d2e
-client.urgent #2f343a #900000 #ffffff #900000
+# class                 border  bg      text    indicator child border
+client.focused          #c10000 #c10000 #ffffff #dddddd   #c10000
+client.focused_inactive #333333 #333333 #888888 #292d2e   #5f676a
+client.unfocused        #333333 #333333 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+#                       ignored                 ignored
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #c10000
+client.background       #000000
 set $mod Mod4
+
+new_window pixel 1
 
 bindsym Print exec scrot '%F_%T.png' -e 'mv $f ~/screenshots/'
 floating_modifier $mod
