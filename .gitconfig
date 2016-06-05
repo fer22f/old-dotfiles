@@ -1,0 +1,7 @@
+[user]
+	email = fer22f@gmail.com
+	name = fer22f
+[push]
+	default = simple
+[pull]
+	rebase = true
