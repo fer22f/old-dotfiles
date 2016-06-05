@@ -20,6 +20,9 @@ export WORKON_HOME=$HOME/.venvs
 export PROJECT_HOME=$HOME/dev
 source /usr/bin/virtualenvwrapper.sh
 
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_DATA_HOME=$HOME/.local/share
+
 export GOPATH=$HOME/dev/go
 export PATH=$PATH:$GOPATH/bin
 
