@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+use Env qw(BLOCK_INSTANCE);
+
+if ($ENV{'BLOCK_BUTTON'} == 4) {
+    system("mpc -q volume +1");
+} elsif ($ENV{'BLOCK_BUTTON'} == 5) {
+    system("mpc -q volume -1");
+}
+
+print("\x{f028} " . qx(mpc volume | cut -c9-))

@@ -1,0 +1,43 @@
+#!/usr/bin/perl
+use Env qw(BLOCK_INSTANCE);
+use feature 'unicode_strings';
+use Encode;
+
+if ($ENV{'BLOCK_BUTTON'} == 1) {
+    system("mpc -q next");
+} elsif ($ENV{'BLOCK_BUTTON'} == 2) {
+    system("mpc -q toggle"); # You have a button on the keyboard for that, but whatever
+} elsif ($ENV{'BLOCK_BUTTON'} == 3) {
+    system("mpc -q prev");
+}
+
+if ($BLOCK_INSTANCE eq 'time') {
+  my @s = split(/\n/, `mpc`);
+  my ($time) =
+    @s[1] =~ /\[.*\] #\d+\/\d+ +(\d+:\d+\/\d+:\d+).*/;
+  print(@s[1] =~ /.*(\d+:\d+\/\d+:\d+).*/);
+} elsif ($BLOCK_INSTANCE eq 'artist') {
+  my @s = split(/\n/, `mpc`);
+  my ($state) = @s[1] =~ /\[(.*)\].*/;
+  my $symbol = "\x{f04d}";
+
+  if($state eq 'playing') {
+    $symbol = "\x{f04b}";
+  } elsif($state eq 'paused') {
+    $symbol = "\x{f04c}";
+  }
+
+  my $result = decode_utf8(`mpc current -f %artist%`);
+  # Stupid HTML!
+  $result =~ s/&/&amp;/;
+  $result =~ s/feat./ft./;
+  if (!$result eq "") {
+    $result = "  $result";
+  }
+
+  print("$symbol$result");
+} else {
+  my $result = `mpc current -f %title%`;
+  $result =~ s/&/&amp;/;
+  print($result);
+}
