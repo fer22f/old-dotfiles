@@ -157,7 +157,7 @@ assign [class="^discord$"] → $workspace2
 assign [class="^net-ftb-main-Main$"] → 4
 
 exec --no-startup-id urxvt -t irssi -e irssi
-exec firefox-aurora
+exec firefox-developer
 exec skype
 exec DiscordCanary
 exec i3-msg 'workspace $workspace2; layout tabbed'

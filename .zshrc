@@ -14,7 +14,7 @@ eval $(thefuck --alias)
 export EDITOR="nvim"
 export VISUAL="nvim"
 export TERMINAL="urxvtc"
-export BROWSER="firefox-aurora"
+export BROWSER="firefox-developer"
 
 export WORKON_HOME=$HOME/.venvs
 export PROJECT_HOME=$HOME/dev
