@@ -1,5 +1,5 @@
-command=/usr/lib/i3blocks/$BLOCK_NAME
-separator_block_width=12
+command=$XDG_DATA_HOME/i3blocks/$BLOCK_NAME
+separator_block_width=13
 markup=pango
 
 [memory]
@@ -21,10 +21,6 @@ instance=/
 interval=30
 
 [iface]
-color=#00FF00
-interval=10
-
-[wifi]
 interval=10
 
 [bandwidth]
