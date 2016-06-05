@@ -7,3 +7,5 @@ but for the i3blocks bar, I use Roboto, because I also like Material Design (the
 
 My Neovim setup uses Deoplete, Vim-Plug and Neomake with some plugins for
 autocompleting D, Go and Rust and some Neomake magic for compiling latex.
+
+![Desktop screenshot](archey.png)
