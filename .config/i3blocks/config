@@ -1,52 +1,75 @@
 command=$XDG_DATA_HOME/i3blocks/$BLOCK_NAME
 separator_block_width=13
 markup=pango
+border_bottom=2
+border_right=0
+border_top=0
+border_left=0
 
 [memory]
 interval=30
 separator=false
+border=#6D4C41
 
 [memory]
 instance=swap
 interval=30
+border=#FF5722
 
 [disk]
 label=~
 interval=30
 separator=false
+border=#FFA000
 
 [disk]
 label=/
 instance=/
 interval=30
+border=#FFC107
 
 [iface]
 interval=10
+border=#C0CA33
 
 [bandwidth]
 interval=2
+border=#7CB342
+
+[mediaplayer]
+instance=artist
+interval=1
+separator=false
+separator_block_width=5
+border=#4CAF50
+
+[mediaplayer]
+instance=title
+interval=3
+separator=false
+separator_block_width=5
+border=#00BCD4
+
+[mediaplayer]
+instance=time
+interval=1
+separator=false
+border=#1976D2
+
+[volume_mpc]
+interval=1
+border=#673ab7
 
 [battery]
 interval=5
-
-[mediaplayer]
-command=mpc current -f '%artist% - %title%'
-interval=5
-separator=false
-
-[volume]
-label=♪
-command=mpc volume | cut -c9-
-interval=1
+border=#9c27b0
 
 [cpu_usage]
 interval=10
 min_width=100%
-
-[separator]
+border=#e91e63
 
 [time]
-command=date '+%Y-%m-%d %H:%M:%S'
+command=date '+%d/%m/%y %H:%M:%S'
 interval=1
-
-[separator]
+border=#d50000
